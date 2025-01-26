@@ -6,7 +6,7 @@ const CarsDetailPage = ({
   params: { carId: string };
   searchParams: any;
 }) => {
-  console.log(searchParams);
+  console.log(params, searchParams);
   //fetch with filter parameterd
 
   return (

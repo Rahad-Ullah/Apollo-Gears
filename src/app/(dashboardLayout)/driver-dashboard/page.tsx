@@ -1,5 +1,5 @@
 const DriverDashboardPage = () => {
-  return <div>DriverDashboardPage</div>;
+  return <div>Driver Dashboard Home Page</div>;
 };
 
 export default DriverDashboardPage;
