@@ -13,12 +13,15 @@ export const AuthOptions: NextAuthOptions = {
   ],
 
   callbacks: {
+    // handle logic after SignIn
     async signIn({ profile, account }: any) {
       try {
+        // check if signIn succeeded and user profile exists
         if (!profile || !account) {
           return false;
         }
 
+        // save the user into your database after signIn with google
         if (account?.provider === "google") {
           const response: any = await nexiosInstance.post("/auth/login", {
             name: profile.name,

@@ -3,6 +3,7 @@ import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 import { decodeToken } from "./helpers/jwtHelpers";
 
+// define routes that related with authentication
 const authRoutes = ["/login", "/register"];
 
 export async function middleware(request: NextRequest) {
@@ -31,8 +32,8 @@ export async function middleware(request: NextRequest) {
 
   decodedToken = decodeToken(accessToken) as any;
   const role = decodedToken?.role;
-  console.log(role, pathname);
 
+  // allow access to dashboard routes based on user role
   if (role === "admin" && pathname.includes("/admin-dashboard")) {
     return NextResponse.next();
   }
@@ -42,7 +43,7 @@ export async function middleware(request: NextRequest) {
   if (role === "user" && pathname.includes("/dashboard")) {
     return NextResponse.next();
   }
-
+  // redirect to home page if the user tries to access unauthorized routes or authRoutes
   return NextResponse.redirect(new URL("/", request.url));
 }
 
