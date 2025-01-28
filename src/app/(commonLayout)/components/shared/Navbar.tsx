@@ -35,6 +35,12 @@ export default function NavBar() {
           {/* {user && <Link href={routeMap[user?.role]}>Dashboard</Link>} */}
           <Link href={routeMap.user}>Dashboard</Link>
         </NavbarItem>
+        <NavbarItem>
+          <Link href={"/admin-dashboard"}>Admin Dashboard</Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link href={"/driver-dashboard"}>Driver Dashboard</Link>
+        </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
