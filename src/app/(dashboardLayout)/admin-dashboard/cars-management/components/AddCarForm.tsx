@@ -11,7 +11,6 @@ import ActionSubmitButton from "@/app/(commonLayout)/components/shared/ActionSub
 const fuelType = [
   { label: "Hybrid", value: "Hybrid" },
   { label: "Octane", value: "Octane" },
-  { label: "Hybrid", value: "Hybrid" },
   { label: "Electric", value: "Electric" },
   { label: "Diesel", value: "Diesel" },
   { label: "Petrol", value: "Petrol" },
@@ -53,8 +52,8 @@ const AddCarForm = ({ onClose }: any) => {
   }, [state, ref, onClose]);
 
   return (
-    <div className="m-3">
-      <form ref={ref} action={formAction}>
+    <div className="mx-3">
+      <form ref={ref} action={formAction} className="flex flex-col gap-2">
         <Input
           required
           name="name"

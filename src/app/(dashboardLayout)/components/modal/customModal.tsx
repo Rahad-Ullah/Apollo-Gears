@@ -4,7 +4,7 @@ import { Modal, ModalContent } from "@heroui/modal";
 const CustomModal = ({ children, ...props }: any) => {
   return (
     <Modal {...props}>
-      <ModalContent className="p-4">{children}</ModalContent>
+      <ModalContent className="p-4 my-16">{children}</ModalContent>
     </Modal>
   );
 };

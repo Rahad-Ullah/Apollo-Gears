@@ -8,7 +8,7 @@ import CustomModal from "@/app/(dashboardLayout)/components/modal/customModal";
 const AddCar = () => {
   const { isOpen, onOpen, onClose, onOpenChange } = useDisclosure();
   return (
-    <div className="my-3">
+    <div className="m-4">
       <CustomModal size="3xl" isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalHeader className="p-4">Add A Car</ModalHeader>
         <AddCarForm onClose={onClose} />
