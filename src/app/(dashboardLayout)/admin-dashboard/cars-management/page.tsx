@@ -13,11 +13,13 @@ const CarsManagement = async () => {
     <>
       <AddCar />
 
-      {res?.data?.data?.map((car: any) => (
-        <div key={car._id}>
-          <h1>{car.name}</h1>
-        </div>
-      ))}
+      <div className="">
+        {res?.data?.data?.map((car: any) => (
+          <div key={car._id}>
+            <h1 className="text-xl font-bold">{car.name}</h1>
+          </div>
+        ))}
+      </div>
     </>
   );
 };
